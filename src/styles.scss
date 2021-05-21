@@ -1,0 +1,56 @@
+:root {
+  --black: #303030;
+  --white: #fff;
+  --brand: #4e74F5;
+  --gray: #e9eaee;
+  --red: #f90043;
+}
+
+* {
+  font-size: medium;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+$max: 10;
+$offset: 1;
+$unit: 'rem'; // Feel free to change the unit.
+
+@mixin list-loop($className, $styleName) {
+  $i: 0;
+  @while $i <= $max {
+    #{$className + $i} {
+      #{$styleName}: #{$i + $unit} !important;
+    }
+    $i: $i + $offset;
+  }
+}
+
+// Margins
+@include list-loop('.mt-', 'margin-top');
+@include list-loop('.mr-', 'margin-right');
+@include list-loop('.mb-', 'margin-bottom');
+@include list-loop('.ml-', 'margin-left');
+@include list-loop('.mx-', 'margin');
+
+// Paddings
+@include list-loop('.pt-', 'padding-top');
+@include list-loop('.pr-', 'padding-right');
+@include list-loop('.pb-', 'padding-bottom');
+@include list-loop('.pl-', 'padding-left');
+@include list-loop('.px-', 'padding');
+
+.ant-row {
+  padding: 1rem 2rem;
+}
+
+.ant-layout {
+  background-color: var(--white);
+}
