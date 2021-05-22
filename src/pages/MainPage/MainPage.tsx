@@ -5,7 +5,6 @@ import {
   PointerLockControls,
   ContactShadows,
   PerspectiveCamera,
-  OrbitControls,
 } from '@react-three/drei';
 import Box from './Box';
 import {Physics} from '@react-three/cannon';
