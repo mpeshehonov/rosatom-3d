@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import 'antd/dist/antd.less';
 import './styles.scss';
 import MainPage from './pages/MainPage';
+import ElPage from './pages/ElPage';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <PageLayout>
         <Switch>
           <Route path="/" component={MainPage} exact />
+          <Route path="/el" component={ElPage} exact />
         </Switch>
       </PageLayout>
     </Router>
