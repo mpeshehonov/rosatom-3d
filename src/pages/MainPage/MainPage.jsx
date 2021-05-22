@@ -1,4 +1,4 @@
-import React, {Suspense} from 'react';
+import React, {Suspense, useState} from 'react';
 import {Canvas} from '@react-three/fiber';
 import {
   Sky,
@@ -12,6 +12,7 @@ import Player from './Player';
 import Ground from './Ground';
 import Buildings from './Buildings';
 import {useControls} from 'leva';
+import SockJsClient from 'react-stomp';
 
 const MainPage = () => {
   const controls = useControls({
@@ -19,9 +20,18 @@ const MainPage = () => {
     sunPositionY: {value: 10, min: -200, max: 200, step: 10},
     sunPositionZ: {value: 100, min: -200, max: 200, step: 10},
   });
+  const [message, setMessage] = useState(Array);
 
   return (
     <Canvas>
+      <SockJsClient
+        url="https://ancient-reaches-63076.herokuapp.com/ws"
+        topics={['/sunposition']}
+        onMessage={(msg) => {
+          console.log(msg);
+          setMessage(msg);
+        }}
+      />
       <PerspectiveCamera
         args={[75, window.innerWidth / window.innerHeight, 0.1, 200000]}
         position={[-14, 8, 16]}
@@ -41,9 +51,9 @@ const MainPage = () => {
       <PointerLockControls />
       <Sky
         sunPosition={[
-          controls.sunPositionX,
-          controls.sunPositionY,
-          controls.sunPositionZ,
+          message.x ?? controls.sunPositionX,
+          message.y ?? controls.sunPositionY,
+          message.z ?? controls.sunPositionZ,
         ]}
       />
       <Physics gravity={[0, -30, 0]}>
