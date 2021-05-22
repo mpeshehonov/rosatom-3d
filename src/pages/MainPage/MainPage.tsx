@@ -1,6 +1,12 @@
 import React, {Suspense} from 'react';
 import {Canvas} from '@react-three/fiber';
-import {Sky, PointerLockControls, ContactShadows} from '@react-three/drei';
+import {
+  Sky,
+  PointerLockControls,
+  ContactShadows,
+  PerspectiveCamera,
+  OrbitControls,
+} from '@react-three/drei';
 import Box from './Box';
 import {Physics} from '@react-three/cannon';
 import Player from './Player';
@@ -17,14 +23,14 @@ const MainPage = () => {
 
   return (
     <Canvas>
-      <perspectiveCamera
+      <PerspectiveCamera
         args={[75, window.innerWidth / window.innerHeight, 0.1, 200000]}
         position={[-14, 8, 16]}
       >
         <line>
           <lineBasicMaterial color={0xaaffaa} />
         </line>
-      </perspectiveCamera>
+      </PerspectiveCamera>
       <ContactShadows
         opacity={1}
         width={1}
