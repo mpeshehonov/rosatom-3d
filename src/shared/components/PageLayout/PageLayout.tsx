@@ -10,7 +10,7 @@ const PageLayout: FC = ({children}) => {
       <Layout>
         <Layout.Content className="layout-content">
           <Row
-            justify="center"
+            justify="space-between"
             gutter={{xs: 8, sm: 16, md: 24, lg: 32}}
             className="mt-6 page"
           >

@@ -10,9 +10,9 @@ const Header = () => {
         РОСАТОМ
       </Link>
       <div className="header__button">
-        <Link to="/panel">
+        <Link to="/el">
           <Button type="primary" shape="round" size="large">
-            Панель
+            План
           </Button>
         </Link>
       </div>
