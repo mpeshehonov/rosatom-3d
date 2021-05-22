@@ -1,10 +1,18 @@
 import React from 'react';
-// import {Canvas} from '@react-three/fiber';
-// import Box from './Box';
+import scheme from './img/scheme.svg'
+import SchemeSvg from './component/SchemeSvg'
+import './component/Scheme.css'
 
 const ElPage = () => {
     return (
-        <p>This is el route</p>
+            <div className="scheme">
+                <img
+                    src={scheme}
+                    alt="План этажа"
+                    className="svg_img"
+                />
+                <SchemeSvg/>
+        </div>
     );
 };
 
