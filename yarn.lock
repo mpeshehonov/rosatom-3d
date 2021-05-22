@@ -1716,6 +1716,11 @@
   dependencies:
     "@babel/runtime" "^7.13.10"
 
+"@react-three/cannon@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@react-three/cannon/-/cannon-1.1.1.tgz#ff43d0910f095f46325846ca986c67cb4d647639"
+  integrity sha512-PpXpGkJUwKTil8a50LgdhnEaHHcLURmpYbELn9Ll2XDI5k1li0cyobNC15YZwbRDvPJgWKtCqYK75eX4r7QxqA==
+
 "@react-three/drei@^5.1.6":
   version "5.1.6"
   resolved "https://registry.yarnpkg.com/@react-three/drei/-/drei-5.1.6.tgz#c0ce4eba6a2aa21758de5ecc6c69b50a43f97e06"
@@ -2001,6 +2006,11 @@
   integrity sha512-kSjgDMZONiIfSH1Nxcr5JIRMwUetDki63FSQfpTCz8ogF3Ulqm8+mr5f78dUYs6vMiB6gBusQqfQmBvHZj/lwg==
   dependencies:
     "@babel/types" "^7.3.0"
+
+"@types/cannon@^0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@types/cannon/-/cannon-0.1.5.tgz#2a265031f662fc4ff3e57e89688e1a06c3bbd2ce"
+  integrity sha512-o+FQmZV4fDXKI1W+1Rt3FNDmMGU7Iv4ObWFAH/dVB9AqzdgD7FmbW4QmsxVQGcj8a563xyVV9UXVB9rba7ps2w==
 
 "@types/classnames@^2.3.1":
   version "2.3.1"
