@@ -3,6 +3,7 @@ import SockJsClient from 'react-stomp';
 
 export const Socket = () => {
   const [message, setMessage] = useState(Array);
+
   return (
     <div>
       <SockJsClient
@@ -13,7 +14,25 @@ export const Socket = () => {
           setMessage(msg);
         }}
       />
-      {<p>{message.buildingName}</p>}
+      <p>{message.buildingName}</p>
+      <table>
+        {message.rooms &&
+          message.rooms.map((room) => (
+            <tr>
+              <td>{room.roomId}</td>
+              <td>{room.roomName}</td>
+              <td>
+                {room.sensors.map((sensor) => (
+                  <tr>
+                    <td>{sensor.sensorId}</td>
+                    <td>{sensor.sensorName}</td>
+                    <td>{sensor.sensorType}</td>
+                  </tr>
+                ))}
+              </td>
+            </tr>
+          ))}
+      </table>
     </div>
   );
 };
