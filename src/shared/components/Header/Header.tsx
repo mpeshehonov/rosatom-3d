@@ -15,6 +15,11 @@ const Header = () => {
             План
           </Button>
         </Link>
+        <Link to="/view-3d">
+          <Button type="primary" shape="round" size="large">
+            3D
+          </Button>
+        </Link>
       </div>
     </Layout.Header>
   );

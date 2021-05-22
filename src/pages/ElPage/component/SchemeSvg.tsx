@@ -1,5 +1,6 @@
 import PolyObject from './PolyObject';
 import SignatureObject from './SignatureObject';
+import React from 'react';
 
 const SchemeSvg = () => {
   return (
