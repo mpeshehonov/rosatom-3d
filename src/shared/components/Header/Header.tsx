@@ -24,6 +24,11 @@ const Header = () => {
                             План этажей
                         </Button>
                     </Link>
+                    <Link to="/socket">
+                        <Button type="primary" shape="round" size="large">
+                            Socket
+                        </Button>
+                    </Link>
                 </Space>
             </div>
         </Layout.Header>

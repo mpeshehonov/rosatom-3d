@@ -1,0 +1,74 @@
+{
+  "buildingId": "f5b8f22a-d936-4d01-aaf9-e6f5bcfb0831",
+  "buildingName": "Технологический комплекс Заря",
+  "rooms": [
+    {
+      "roomId": "48fdd21f-ba44-4210-b943-e7474dd41153",
+      "roomName": "Комната номер # 0",
+      "equipments": [
+        {
+          "equipmentId": "ae427e5c-fa04-4b43-8e58-71fcaa3de89a",
+          "equipmentName": "Лампочка #0",
+          "wattConsuming": 40,
+          "value": 600,
+          "statement": null
+        },
+        {
+          "equipmentId": "0824e3cd-ef7d-43a2-ad13-57cadb8fa8bc",
+          "equipmentName": "Кондиционер #0",
+          "wattConsuming": 400,
+          "value": 50,
+          "statement": null
+        },
+        {
+          "equipmentId": "4c047138-ad82-4363-b386-19abaf20ded9",
+          "equipmentName": "Радиатор #0",
+          "wattConsuming": 400,
+          "value": 80,
+          "statement": null
+        }
+      ],
+      "sensors": [
+        {
+          "sensorId": "047f1f63-0be5-415d-a16b-81857d9d7ba1",
+          "sensorName": "Датчик света",
+          "sensorType": "LIGHT",
+          "sensorState": {
+            "data": 600,
+            "additionalData": 100
+          }
+        },
+        {
+          "sensorId": "a05991c7-c15d-4965-b641-ac5439866e6c",
+          "sensorName": "Датчик электричества",
+          "sensorType": "ELECTRIC",
+          "sensorState": {
+            "data": 840,
+            "additionalData": 100
+          }
+        },
+        {
+          "sensorId": "d97ffd79-4567-4f2b-8f4c-f5454f21c539",
+          "sensorName": "Датчик воздуха",
+          "sensorType": "AIR",
+          "sensorState": {
+            "data": 180,
+            "additionalData": 100
+          }
+        },
+        {
+          "sensorId": "a2dde7f8-3f27-4c1c-a4e7-665a96c63d89",
+          "sensorName": "Датчик температуры",
+          "sensorType": "TEMPERATURE",
+          "sensorState": {
+            "data": 18,
+            "additionalData": 100
+          }
+        }
+      ],
+      "statement": null
+    }
+  ],
+  "statement": null,
+  "currentTimestamp": 0
+}
