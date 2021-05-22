@@ -5,7 +5,7 @@ import Box from './Box';
 import {Physics} from '@react-three/cannon';
 import Player from './Player';
 import Ground from './Ground';
-import Building from './Building';
+import Buildings from './Buildings';
 
 const MainPage = () => {
   return (
@@ -20,7 +20,7 @@ const MainPage = () => {
         <Box position={[1.2, 1, 0]} />
       </Physics>
       <Suspense fallback={null}>
-        <Building />
+        <Buildings />
       </Suspense>
       <group name="projectors">
         <mesh position={[-45, 0, 0]} castShadow={true}>
