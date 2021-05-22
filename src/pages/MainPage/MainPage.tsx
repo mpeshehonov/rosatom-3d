@@ -23,6 +23,20 @@ const MainPage = () => {
           <boxBufferGeometry args={[2, 1, 2]} />
           <meshLambertMaterial color="#69f" />
         </mesh>
+        <mesh position={[-50, 0, 0]} castShadow={true}>
+          <boxBufferGeometry args={[2, 1, 2]} />
+          <meshLambertMaterial color="#69f" />
+        </mesh>
+        <mesh position={[0, 2, 0]} rotation={[0, 2, 0]} castShadow={true}>
+          <spotLight
+            args={[0xffffff, 0.5, 150]}
+            power={1.5}
+            angle={0.5}
+            decay={2}
+            penumbra={0.1}
+            distance={200}
+          />
+        </mesh>
       </group>
     </Canvas>
   );
