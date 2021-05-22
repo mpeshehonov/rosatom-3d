@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import {Canvas} from '@react-three/fiber';
 import {Sky, PointerLockControls} from '@react-three/drei';
 import Box from './Box';
@@ -19,7 +19,9 @@ const MainPage = () => {
         <Box position={[-1.2, 1, 0]} />
         <Box position={[1.2, 1, 0]} />
       </Physics>
-      <Building />
+      <Suspense fallback={null}>
+        <Building />
+      </Suspense>
       <group name="projectors">
         <mesh position={[-45, 0, 0]} castShadow={true}>
           <boxBufferGeometry args={[2, 1, 2]} />
