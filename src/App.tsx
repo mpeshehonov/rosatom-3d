@@ -5,6 +5,7 @@ import 'antd/dist/antd.less';
 import './styles.scss';
 import MainPage from './pages/MainPage';
 import ElPage from './pages/ElPage';
+import ReConfigPage from './pages/ReConfigPage';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Switch>
           <Route path="/" component={MainPage} exact />
           <Route path="/el" component={ElPage} exact />
+          <Route path="/reconfig" component={ReConfigPage} exact />
         </Switch>
       </PageLayout>
     </Router>
