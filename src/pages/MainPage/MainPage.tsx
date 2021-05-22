@@ -1,6 +1,6 @@
 import React, {Suspense} from 'react';
 import {Canvas} from '@react-three/fiber';
-import {Sky, PointerLockControls} from '@react-three/drei';
+import {Sky, PointerLockControls, ContactShadows} from '@react-three/drei';
 import Box from './Box';
 import {Physics} from '@react-three/cannon';
 import Player from './Player';
@@ -17,6 +17,23 @@ const MainPage = () => {
 
   return (
     <Canvas>
+      <perspectiveCamera
+        args={[75, window.innerWidth / window.innerHeight, 0.1, 200000]}
+        position={[-14, 8, 16]}
+      >
+        <line>
+          <lineBasicMaterial color={0xaaffaa} />
+        </line>
+      </perspectiveCamera>
+      <ContactShadows
+        opacity={1}
+        width={1}
+        height={1}
+        blur={1}
+        far={10}
+        resolution={256}
+      />
+      <PointerLockControls />
       <Sky
         sunPosition={[
           controls.sunPositionX,
@@ -24,8 +41,6 @@ const MainPage = () => {
           controls.sunPositionZ,
         ]}
       />
-      <pointLight position={[10, 10, 10]} />
-      <PointerLockControls />
       <Physics gravity={[0, -30, 0]}>
         <Player />
         <Ground />
