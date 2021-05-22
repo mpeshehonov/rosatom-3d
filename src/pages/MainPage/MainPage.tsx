@@ -6,11 +6,24 @@ import {Physics} from '@react-three/cannon';
 import Player from './Player';
 import Ground from './Ground';
 import Buildings from './Buildings';
+import {useControls} from 'leva';
 
 const MainPage = () => {
+  const controls = useControls({
+    sunPositionX: {value: 100, min: -200, max: 200, step: 10},
+    sunPositionY: {value: 10, min: -200, max: 200, step: 10},
+    sunPositionZ: {value: 100, min: -200, max: 200, step: 10},
+  });
+
   return (
     <Canvas>
-      <Sky sunPosition={[100, 10, 100]} />
+      <Sky
+        sunPosition={[
+          controls.sunPositionX,
+          controls.sunPositionY,
+          controls.sunPositionZ,
+        ]}
+      />
       <pointLight position={[10, 10, 10]} />
       <PointerLockControls />
       <Physics gravity={[0, -30, 0]}>
