@@ -26,7 +26,7 @@ const Header = () => {
                     </Link>
                     <Link to="/table">
                         <Button type="primary" shape="round" size="large">
-                            Socket
+                            Показатели
                         </Button>
                     </Link>
                 </Space>
