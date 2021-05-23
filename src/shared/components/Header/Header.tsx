@@ -19,14 +19,14 @@ const Header = () => {
                             Панель
                         </Button>
                     </Link>
-                    <Link to="/el">
+                    <Link to="/floor">
                         <Button type="primary" shape="round" size="large">
                             План этажей
                         </Button>
                     </Link>
-                    <Link to="/socket">
+                    <Link to="/table">
                         <Button type="primary" shape="round" size="large">
-                            Socket
+                            Показатели
                         </Button>
                     </Link>
                 </Space>
