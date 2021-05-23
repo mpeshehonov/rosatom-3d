@@ -13,8 +13,8 @@ const App = () => {
       <PageLayout>
         <Switch>
           <Route path="/" component={MainPage} exact />
-          <Route path="/el" component={ElPage} exact />
-          <Route path="/Socket" component={Socket} exact />
+          <Route path="/floor" component={ElPage} exact />
+          <Route path="/table" component={Socket} exact />
         </Switch>
       </PageLayout>
     </Router>
